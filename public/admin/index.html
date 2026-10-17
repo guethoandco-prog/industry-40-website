@@ -6,7 +6,38 @@
     <title>Administration du site</title>
   </head>
   <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Script officiel de Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Configuration intégrée pour éviter les erreurs 404 de config.yml
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: "Guetho24/industry-40-website",
+            branch: "main"
+          },
+          media_folder: "public/images",
+          public_folder: "/images",
+          collections: [
+            {
+              name: "pages",
+              label: "Pages du site",
+              files: [
+                {
+                  file: "src/content/accueil.json",
+                  label: "Page d'accueil",
+                  name: "accueil",
+                  fields: [
+                    { label: "Titre principal", name: "title", widget: "string" },
+                    { label: "Sous-titre", name: "subtitle", widget: "text" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
