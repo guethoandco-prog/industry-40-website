@@ -6,13 +6,16 @@
     <title>Administration du site</title>
   </head>
   <body>
+    <!-- Script d'authentification Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Script principal de Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       CMS.init({
         config: {
           backend: {
             name: "github",
-            repo: "Guetho24/industry-40-website",
+            repo: "guethoandco-prog/industry-40-website",
             branch: "main"
           },
           media_folder: "public/images",
