@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Guetho24/industry-40-website
+  repo: guethoandco-prog/industry-40-website
   branch: main
 
 media_folder: "public/images"
